@@ -14,7 +14,7 @@ function App() {
 			return;
 		}
 
-		let remaining = contactsFromJSON.filter(contact => !contacts.includes(contact));
+		let remaining = contactsFromJSON.filter(contact => !contacts.find(element => element.id === contact.id));
 
 		const randomIndex = Math.floor(Math.random() * remaining.length);
 
